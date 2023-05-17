@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+    <!-- * 는 전체 
+        기본 선택자는 그대로 
+        id 는 # 
+        class 는 . 
+        선택자 - 중괄호 - 속성키:속성값; 순으로 나열 -->
+    <style>
+        * {
+            color: black;
+        }
+        /* p, h1, h2, h3, h4 {
+            margin: 0;
+            padding: 0;
+        } 이렇게 하면 피곤해진다. 근데 또 어쩔 수 없음.*/
+        h2 {
+            color: red;
+            background-color: gold;
+        }
+        #first {
+            color: rgb(16, 86, 151);
+        }
+        .phrase {
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">큰 타이틀</h1>
+    <h2 class="subtitle">타이틀</h2>
+    <p id="first" class="phrase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem labore dolorem ducimus unde magnam aliquam dolores odio sed placeat?</p>
+    <p id="second" class="phrase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt autem labore dolorem ducimus unde magnam aliquam dolores odio sed placeat?</p>
+</body>
+</html>

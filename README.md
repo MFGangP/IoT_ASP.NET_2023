@@ -20,3 +20,7 @@ IoT_ASP.NET_2023 학습 리포지토리
 - 웹 기본
 	- Bootstrap 예제 클로닝
 	- 핀터레스트 스타일 페이지 클로닝
+
+Bootstrap 앨범 사이트 클로닝
+
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/Bootstrap_ex.gif?raw=true" width="640">

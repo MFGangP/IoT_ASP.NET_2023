@@ -28,3 +28,14 @@ Bootstrap 앨범 사이트 클로닝
 핀터레스트 스타일 사이트 클로닝
 
 <img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/Aspnet.gif?raw=true" width="640">
+
+## 4일차
+
+- ASP.NET MVC
+	- ASP.NET 기본
+	- ASP.NET 프로젝트
+	thisisunsafe
+	
+ASP.NET Core MVC 게시판
+
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASP.NETMVC.png?raw=true" width="640">

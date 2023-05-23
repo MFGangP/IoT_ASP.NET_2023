@@ -39,3 +39,10 @@ Bootstrap 앨범 사이트 클로닝
 ASP.NET Core MVC 게시판
 
 <img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASP.NETMVC.png?raw=true" width="640">
+
+## 5일차
+
+- ASP.NET MVC
+	- 게시판 페이징 까지
+	
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC.gif?raw=true" width="640">

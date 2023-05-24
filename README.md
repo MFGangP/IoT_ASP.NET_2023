@@ -46,3 +46,9 @@ ASP.NET Core MVC 게시판
 	- 게시판 페이징 까지
 	
 <img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC.gif?raw=true" width="640">
+
+## 6일차
+
+- ASP.NET MVC
+	- 게시판 정리
+	- 

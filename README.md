@@ -31,7 +31,7 @@ Bootstrap 앨범 사이트 클로닝
 
 ## 4일차
 
-- ASP.NET MVC
+- ASP.NET Core MVC
 	- ASP.NET 기본
 	- ASP.NET 프로젝트
 	thisisunsafe
@@ -51,4 +51,19 @@ ASP.NET Core MVC 게시판
 
 - ASP.NET MVC
 	- 게시판 정리
-	- 
+	- 계정관리(회원가입, 로그인)
+	
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC_Login.gif?raw=true" width="640">
+	
+## 7일차
+- ASP.NET Core MVC
+	- 게시판 정리(아이디 삭제, 번호표시)
+	- 권한 관리
+
+## 8일차
+- ASP.NET Core MVC
+	- 부트스트랩 테마 : SEO Dream 적용
+	
+- ASP.NET RestAPI (jQuery, WPF)
+- 개인포트폴리오
+	- 부트스트랩 테마 재적용

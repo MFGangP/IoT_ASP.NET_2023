@@ -72,7 +72,7 @@ ASP.NET Core MVC 게시판
 - ASP.NET Core MVC
 	- 부트스트랩 테마 : SEO Dream 적용
 	
-<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC06.gif?raw=true" width="640">
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC_06.gif?raw=true" width="640">
 	
 ## 9일차
 

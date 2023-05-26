@@ -44,6 +44,7 @@ ASP.NET Core MVC 게시판
 
 - ASP.NET MVC
 	- 게시판 페이징 까지
+	- Trumbwyz 에디터
 	
 <img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC.gif?raw=true" width="640">
 
@@ -51,19 +52,37 @@ ASP.NET Core MVC 게시판
 
 - ASP.NET MVC
 	- 게시판 정리
-	- 계정관리(회원가입, 로그인)
-	
+	- 계정관리
+		- 회원가입
+		- 로그인
 <img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC_Login.gif?raw=true" width="640">
 	
 ## 7일차
 - ASP.NET Core MVC
-	- 게시판 정리(아이디 삭제, 번호표시)
+	- 게시판 정리
+		- 아이디 삭제
+		- 번호표시
 	- 권한 관리
+		- 사용자 별 권한 할당
+		- 관리자, 사용자 분리
+		- 관리자 게시글 모두 삭제 가능
+		- 프로필 수정
 
 ## 8일차
 - ASP.NET Core MVC
 	- 부트스트랩 테마 : SEO Dream 적용
 	
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC06.gif?raw=true" width="640">
+	
+## 9일차
+
+- ASP.NET Core MVC
+	- SEO Dream 테마 완료
+
 - ASP.NET RestAPI (jQuery, WPF)
+	- RestAPI Server
+	- WPF Client
+	
 - 개인포트폴리오
 	- 부트스트랩 테마 재적용
+	

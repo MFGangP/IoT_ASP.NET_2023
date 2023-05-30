@@ -1,0 +1,77 @@
+﻿@model ASPNET02_WebApp.Models.Board
+
+@{
+    ViewData["Title"] = "게시글 상세";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+<div style="padding: 50px;" class="mt-5">
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-8">
+                <h2 class="text-primary">게시판 글상세</h2>
+            </div>
+            <div class="col-4 text-end">
+            </div>
+        </div>
+    </div>
+    <hr />
+<div class="container">
+    <div class="row">
+        <div class="col">
+                <div>
+                    <dl class="row">
+                        @*<dt class = "col-sm-2">
+                        @Html.DisplayNameFor(model => model.UserId)
+                        </dt>*@
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.UserName)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.UserName)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Title)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Title)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.ReadCount)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ReadCount)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.PostDate)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.PostDate)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </dt>
+                        <dd class="col-sm-10">
+                            <!-- 상단 어디에도 m이 대문자인 모델이 없는다 -->
+                            <!-- 내부에 Model 이 숨어있음. 사용 규칙 -->
+                            @Html.Raw(Model.Contents)
+                        </dd>
+                    </dl>
+                </div>
+                <div class="text-end mt-5">
+                    @if (signInManager.IsSignedIn(User) && Model.UserName == User.Identity.Name)
+                    {
+                        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-sm btn-primary">
+                            <i class="bi bi-pencil"></i>&nbsp;수정
+                        </a>
+                    }
+                    &nbsp;
+                    <a asp-controller="Board" asp-action="Index" class="btn btn-sm btn-success">
+                        <i class="bi bi-plus-square"></i>&nbsp;목록
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

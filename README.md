@@ -78,13 +78,19 @@ ASP.NET Core MVC 게시판
 
 - ASP.NET Core MVC
 	- SEO Dream 테마 완료
+		- 스크롤 되는 화면, 안되는 화면 메뉴 분리
+		- 포트폴리오 동적 관리 (이미지 업로드)
+		- IIS .net6.0 런타임 설치
+		
+	- 다른 Bootstrap 테마 적용
 
+SEO Theme 완료
+
+<!--<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC_07.gif?raw=true" width="640"> 집에서 업로드 예정 -->
+
+## 10일차	
 - ASP.NET RestAPI (jQuery, WPF)
-	- RestAPI Server
-	- WPF Client
-	
-## 10일차
-- ASP.NET RestAPI (jQuery, WPF)
+	- (유사)OpenAPI를 운영
 	- RestAPI Server
 	- WPF Client
 	

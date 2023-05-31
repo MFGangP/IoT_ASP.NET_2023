@@ -1,0 +1,420 @@
+﻿@model IEnumerable<ASPNET03_portfolioWebApp.Models.PortfolioModel>;
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+}
+<!-- Shared 밑에 있는 _Notification.cshtml을 index.cshtml에 포함시킴
+이렇게 치면 부분 뷰가 여기에 들어온다. -->
+<partial name="_Notification" />
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">Park Seong Hyeon</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Web Developer, Full Stack Developer, Apps Developer</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <a href="https://github.com/MFGangP" target="_blank" class="btn btn-primary bi bi-github fs-5 py-3 px-4 me-3">&nbsp; GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid"
+                         style="border: 3px solid gold;
+                            border-radius: 70%;"
+                         src="~/LookAtMe.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">7</h1>
+                            <h5 class="mb-0">Years</h5>
+                        </div>
+                        <h3 class="lh-base mb-0"> 년 간의 개발자 & 공학자로써 경험</h3>
+                    </div>
+                    <p class="mb-4">
+                        Park Seong Hyeon은 도전하는 것에서 힘을 얻습니다. 다양한 경험을 소중히 여기며 기회를 만들어가는 Junior 개발자로 높은 적응성과 자신감으로 임무를 빠르게 습득하여 맡은 바를 해내는 유연함을 보여줍니다.
+                    </p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>상호존중</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>자신감</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>유연성</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>문제해결</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">대학 프로젝트</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">5</h2>
+                    </div>
+                    <p class="mb-4">학부시절 전자공학을 전공하며 Table Clock, Line Tracer, Racing Drone, Elevator, 2.4 - 5.15GHz Wireless LAN Channel Patch Antenna 등을 만들며 하드웨어 적인 역량을 쌓아 왔습니다.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">교육 및 인턴 프로젝트</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">13</h2>
+                    </div>
+                    <p class="mb-0">인턴 기간 동안 라디오 게이트웨이 터치 디스플레이, 일회권 발매기 터치 디스플레이를 개발하고, QC를 통해 최종적으로 제품이 만들어지는 과정을 몸소 체험하였습니다. 이를 바탕으로 전문성을 높이기 위해 부경대 IoT 개발자 과정을 수료하며 다양한 프로젝트 및 실무 경험을 쌓았습니다. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">기술 & 경험</h1>
+                    <p class="mb-4">작품, 프로젝트 활동을 하며 다양한 언어를 익히고 여러 교육을 통하여 지식의 깊이를 넓히고 있습니다.</p>
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Python</h6>
+                                    <h6 class="font-weight-bold">65%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">C/C++</h6>
+                                    <h6 class="font-weight-bold">65%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">C#</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MySQL & MariaDB</h6>
+                                    <h6 class="font-weight-bold">70%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Unreal Engine</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Unity</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>Samwon FA Intern</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2020.03 - 2020.06</p>
+                                    <h6 class="mb-0">SW/HW Developer Intern</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>대한공간정보학회 학술대회</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022.03 - 2022.05</p>
+                                    <h6 class="mb-0">오성종, 박성현, 이용창(2022)</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>H-Mobility Class</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022.01 - 2022.03</p>
+                                    <h6 class="mb-0">현대자동차 H-모빌리티 클래스</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>부경대학교 IoT 개발자</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2023.01 - 2023.09</p>
+                                    <h6 class="mb-0">부경대학교 IoT 개발자 과정</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Electric Engineering</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2014.03 - 2021.08</p>
+                                    <h6 class="mb-0">Silla University</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">Python</li>
+                        <li class="mx-3" data-filter=".second">C#</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/naver_news1.png" height="360" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/naver_news1.png" height="360" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Mini-Projects/tree/main/Part1" target="
+"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/tree/main/seonghyeon_weatherApp/python_Weather" target="
+"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Calc_Kiosk_System/main/makeimage/Make_CalcSys_CP.gif" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Calc_Kiosk_System/main/makeimage/Make_CalcSys_CP.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Calc_Kiosk_System" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/smarthome_monitor1.gif" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/smarthome_monitor1.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Mini-Projects/tree/main/Part2" target="
+"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/IoT_WPF_2023" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/IoT_WPF_2023" target="_blank"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+    <!-- Team Start -->
+    <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Team Members</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="https://avatars.githubusercontent.com/u/123913911?v=4" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>jangsihyeon</h5>
+                                <span>Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="https://avatars.githubusercontent.com/u/87066883?v=4" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>drown-ed</h5>
+                                <span>Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="https://avatars.githubusercontent.com/u/123914434?v=4" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>JuHyunLee</h5>
+                                <span>Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="https://avatars.githubusercontent.com/u/123910529?v=4" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>bookchon</h5>
+                                <span>Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="https://avatars.githubusercontent.com/u/123914034?v=4" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>YoungHunPark</h5>
+                                <span>Developer</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">My office:</p>
+                    <h3 class="fw-bold">부경대학교 종합복지관, 부산광역시 용당동</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+82 051-629-5233</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">lovehyun95@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://twitter.com/lovehyun95" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/lovehyun95/?hl=ko" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.twitch.tv/lovehyun95" target="_blank"><i class="fab fa-twitch"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/seonghyeon-park-633749227" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <!-- Contact End -->
+                    <!-- Map Start -->
+                    <div class="container-xxl pt-0 px-0 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="container-xxl pt-0 px-0">
+                            <div class="bg-dark">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.945869969095!2d129.0905545689869!3d35.11752261921614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568ec6a60a7304b%3A0xae83ef5491314e90!2z67aA6rK964yA7ZWZ6rWQIOyihe2VqeuzteyngOq0gA!5e0!3m2!1sko!2skr!4v1685517588946!5m2!1sko!2skr" frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                                        tabindex="0"></iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

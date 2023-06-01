@@ -17,13 +17,13 @@
 
 
     // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
-        } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
-        }
-    });
+    //$(window).scroll(function () {
+    //    if ($(this).scrollTop() > 300) {
+    //        $('.navbar').fadeIn('slow').css('display', 'flex');
+    //    } else {
+    //        $('.navbar').fadeOut('slow').css('display', 'flex');
+    //    }
+    //});
 
 
     // Smooth scrolling on the navbar links
@@ -70,18 +70,18 @@
     }
 
 
-    // Modal Video
-    var $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
-    });
-    console.log($videoSrc);
-    $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
-    $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
+    //// Modal Video
+    //var $videoSrc;
+    //$('.btn-play').click(function () {
+    //    $videoSrc = $(this).data("src");
+    //});
+    //console.log($videoSrc);
+    //$('#videoModal').on('shown.bs.modal', function (e) {
+    //    $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    //})
+    //$('#videoModal').on('hide.bs.modal', function (e) {
+    //    $("#video").attr('src', $videoSrc);
+    //})
 
 
     // Facts counter

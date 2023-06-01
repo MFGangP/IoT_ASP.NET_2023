@@ -20,12 +20,14 @@ namespace ASPNET03_portfolioWebApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewData["NoScroll"] = "true";
             var list = _db.Portfolios.ToList(); // SELECT *
             return View(list);
         }
         [HttpGet]
         public IActionResult Create() 
         {
+
             // PortfolioModel을 선택하는게 아니라, TempPortfolioModel을 선택(O)
             return View();
         }
@@ -33,6 +35,7 @@ namespace ASPNET03_portfolioWebApp.Controllers
         [HttpPost]
         public IActionResult Create(TempPortfolioModel temp)
         {
+
             // 파일 업로드, Temp -> Model db저장
             if (ModelState.IsValid)
             {

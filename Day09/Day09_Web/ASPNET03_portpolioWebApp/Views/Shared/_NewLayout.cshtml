@@ -132,6 +132,7 @@
         <!-- jQuery & Bootstrap CND LINKS -->
         <script src="~/themes/seo_dream/vendor/jquery/jquery.min.js"></script>
         <script src="~/themes/seo_dream/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
         <!-- SEO Dream 테마를 위해서 개발자가 만든 js -->
         <!-- assets/js/owl-carousel.js -->
         <script src="~/themes/seo_dream/assets/js/owl-carousel.js"></script>
@@ -144,6 +145,7 @@
         <script src="~/lib/trumbowyg/langs/ko.js"></script>
         <!-- trumbowyg를 site.js에서 부르기 때문에 상위에 trumbowyg에 관련된 js가 먼저 나와야 한다 안 그러면 오류 남.-->
         <script src="~/js/site.js" asp-append-version="true"></script>
+
         @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

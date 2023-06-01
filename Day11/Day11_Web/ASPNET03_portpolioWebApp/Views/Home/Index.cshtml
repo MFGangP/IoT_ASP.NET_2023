@@ -4,17 +4,16 @@
     Layout = "~/Views/Shared/_NewLayout.cshtml";
 }
 
-}
 <!-- Shared 밑에 있는 _Notification.cshtml을 index.cshtml에 포함시킴
 이렇게 치면 부분 뷰가 여기에 들어온다. -->
 <partial name="_Notification" />
 
 <body>
     <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
+    <div class="container-fluid bg-light my-6" id="home">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                <div class="col-lg-6 py-6 pb-fg0 pt-lg-0">
                     <h3 class="text-primary mb-3">I'm</h3>
                     <h1 class="display-3 mb-3">Park Seong Hyeon</h1>
                     <h2 class="typed-text-output d-inline"></h2>
@@ -33,25 +32,6 @@
         </div>
     </div>
     <!-- Header End -->
-    <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
         <div class="container">
@@ -71,15 +51,16 @@
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>자신감</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>유연성</p>
                     <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>문제해결</p>
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-3 bi bi-github" href="https://github.com/MFGangP" target="
+">&nbsp;Go to GitHub</a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded" src="" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded" src="" alt="">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -246,9 +227,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+               @* @if (Model.Count() > 0)
+                {
+                    var loop = 1;
+                    foreach (var item in Model)
+                    {
+                        if (loop % 2 == 1)
+                        {
+                            // 홀수 이면
+                            @Html.Raw("<div class='item'>")
+                            ;
+                        }
+                        // 동적으로 포트폴리오 이미지 객체를 만들어주는 파트
+                        @Html.Raw("<div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">" +
+                                  " <div class="col-lg-4 col-md-6 portfolio-item first">" +
+                                 $"  <div class="portfolio-img rounded overflow-hidden">"+
+                                  "    <img class="img-fluid" src="{item.Url}" height="360" alt="">" +
+                                  "    <div class='inner-content'>" +
+                                 $"      <a href='{item.Url}' target='_black'><h4>{item.Title}</h4></a>" +
+                                 $"      <span>{item.Description}</span>" +
+                                  "   </div>" +
+                                  "  </div>" +
+                                  " </div>" +
+                                  "</div>");
+
+                        if (loop % 2 == 0)
+                        {
+                            // 짝수이면
+                            @Html.Raw("</div>")
+                            ;
+                        }
+                        loop++;
+                    }
+                }*@
+                <div class="col-lg-4 col-md-6 portfolio-item first" style="text-align : center;">
                     <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" alt="">
+                        <img class="img-fluid" src="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" width="250" height="360" alt="">
                         <div class="portfolio-btn">
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                             <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/tree/main/seonghyeon_weatherApp/python_Weather" target="

@@ -10,6 +10,10 @@ namespace TodoApiServer
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddCors(); // CORS 해결 처리
+            // 서버에 CORS 설정을 해줘야 한다.
+
+
             builder.Services.AddDbContext<ApplicationDbContext>(option => option.UseMySql(
                 builder.Configuration.GetConnectionString("DefaultConnection"),
                 ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
@@ -32,7 +36,8 @@ namespace TodoApiServer
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
+            // 서버에 CORS 사용 허가
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.MapControllers();
 

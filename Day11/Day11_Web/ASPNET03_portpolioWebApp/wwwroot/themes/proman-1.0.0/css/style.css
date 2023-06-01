@@ -79,7 +79,7 @@
 
 /*** Navbar ***/
 .navbar.fixed-top {
-    display: none;
+    display: flex;
     transition: .5s;
 }
 

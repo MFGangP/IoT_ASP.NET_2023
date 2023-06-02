@@ -101,3 +101,10 @@ SEO Theme 완료
 - ASP.NET RestAPI
 	- RestAPI Server 체크
 	- FrontEnd Server 작업
+
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/ASPNETMVC_Portfolio.gif?raw=true" width="640">
+
+## 12일차
+- ASP.NET RestAPI
+	- RestAPI Server 수정
+	- FrontEnd Server 작업 계속

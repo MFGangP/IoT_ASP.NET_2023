@@ -25,7 +25,7 @@ namespace ASPNET03_portfolioWebApp.Controllers
             return View(list);
         }
         [HttpGet]
-        public IActionResult Create() 
+        public IActionResult Create()
         {
 
             // PortfolioModel을 선택하는게 아니라, TempPortfolioModel을 선택(O)
@@ -44,7 +44,7 @@ namespace ASPNET03_portfolioWebApp.Controllers
 
                 // TempPortfolioModel -> PortfolioModel 변경
                 var portfolio = new PortfolioModel()
-                { 
+                {
                     Division = temp.Division,
                     Title = temp.Title,
                     Description = temp.Description,
@@ -84,7 +84,7 @@ namespace ASPNET03_portfolioWebApp.Controllers
             {
                 Debug.Write(ex.Message);
             }
-            
+
             return resultFileName;
         }
     }

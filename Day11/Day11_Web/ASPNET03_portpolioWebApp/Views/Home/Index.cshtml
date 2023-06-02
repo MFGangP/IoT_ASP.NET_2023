@@ -211,102 +211,46 @@
                 <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
                         <li class="mx-3 active" data-filter="*">All Projects</li>
-                        <li class="mx-3" data-filter=".first">Python</li>
-                        <li class="mx-3" data-filter=".second">C#</li>
                     </ul>
                 </div>
             </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/naver_news1.png" height="360" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/naver_news1.png" height="360" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Mini-Projects/tree/main/Part1" target="
-"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-               @* @if (Model.Count() > 0)
-                {
-                    var loop = 1;
-                    foreach (var item in Model)
+                <div class='row g-4 portfolio-container wow fadeInUp' data-wow-delay='0.1s'>
+                    @if (Model.Count() > 0)
                     {
-                        if (loop % 2 == 1)
+                        var loop = 1;
+                        foreach (var item in Model)
                         {
-                            // 홀수 이면
-                            @Html.Raw("<div class='item'>")
-                            ;
+                            if (loop <= 3)
+                            {
+                                // 3장 기준 
+                                @Html.Raw("<div class='col-lg-4 col-md-6 portfolio-item first'>" +
+                                            "         <div class='portfolio-img rounded overflow-hidden'>" +
+                                            $"             <img class='img-fluid' src='{item.Description}' height='360' alt=''>" +
+                                            "             <div class='portfolio-btn'>" +
+                                            $"             <a class='btn btn-lg-square btn-outline-secondary border-2 mx-1' href='{item.Description}' height='360' data-lightbox='portfolio'><i class='fa fa-eye'></i></a>" +
+                                            $"             <a class='btn btn-lg-square btn-outline-secondary border-2 mx-1' href='{item.Url} target='_blank'><i class='fa fa-link'></i></a>" +
+                                            "         </div>" +
+                                            "     </div>"+
+                                            "</div>");
+                            }
+                            if (loop > 3)
+                            {
+                                // 3장 기준
+                                // 동적으로 포트폴리오 이미지 객체를 만들어주는 파트
+                                @Html.Raw("<div class='col-lg-4 col-md-6 portfolio-item second'>" +
+                                            "         <div class='portfolio-img rounded overflow-hidden'>" +
+                                            $"             <img class='img-fluid' src='{item.Description}' height='360' alt=''>" +
+                                            "             <div class='portfolio-btn'>" +
+                                            $"             <a class='btn btn-lg-square btn-outline-secondary border-2 mx-1' href='{item.Description}' height='360' data-lightbox='portfolio'><i class='fa fa-eye'></i></a>" +
+                                            $"             <a class='btn btn-lg-square btn-outline-secondary border-2 mx-1' href='{item.Url} target='_blank'><i class='fa fa-link'></i></a>" +
+                                            "         </div>" +
+                                            "     </div>"+
+                                            "     </div>")
+                                ;
+                            }
+                            loop++;
                         }
-                        // 동적으로 포트폴리오 이미지 객체를 만들어주는 파트
-                        @Html.Raw("<div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">" +
-                                  " <div class="col-lg-4 col-md-6 portfolio-item first">" +
-                                 $"  <div class="portfolio-img rounded overflow-hidden">"+
-                                  "    <img class="img-fluid" src="{item.Url}" height="360" alt="">" +
-                                  "    <div class='inner-content'>" +
-                                 $"      <a href='{item.Url}' target='_black'><h4>{item.Title}</h4></a>" +
-                                 $"      <span>{item.Description}</span>" +
-                                  "   </div>" +
-                                  "  </div>" +
-                                  " </div>" +
-                                  "</div>");
-
-                        if (loop % 2 == 0)
-                        {
-                            // 짝수이면
-                            @Html.Raw("</div>")
-                            ;
-                        }
-                        loop++;
                     }
-                }*@
-                <div class="col-lg-4 col-md-6 portfolio-item first" style="text-align : center;">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" width="250" height="360" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/main/seonghyeon_weatherApp/python_Weather/weatherApp.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1/tree/main/seonghyeon_weatherApp/python_Weather" target="
-"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Calc_Kiosk_System/main/makeimage/Make_CalcSys_CP.gif" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Calc_Kiosk_System/main/makeimage/Make_CalcSys_CP.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Calc_Kiosk_System" target="_blank"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/smarthome_monitor1.gif" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/Mini-Projects/main/images/smarthome_monitor1.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/Mini-Projects/tree/main/Part2" target="
-"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/IoT_WPF_2023" target="_blank"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/MFGangP/IoT_WPF_2023" target="_blank"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

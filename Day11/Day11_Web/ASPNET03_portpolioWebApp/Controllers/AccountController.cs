@@ -1,10 +1,7 @@
 ﻿using ASPNET02_WebApp.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace ASPNET02_WebApp.Controllers
 {
@@ -44,14 +41,15 @@ namespace ASPNET02_WebApp.Controllers
             {
                 // ASP.NET user - aspnetusers 테이블에 데이터 넣기 위해서
                 // 매핑되는 인스턴스를 생성
-                var user = new IdentityUser { 
+                var user = new IdentityUser
+                {
                     UserName = model.Email,
                     Email = model.Email,
                     PhoneNumber = model.PhoneNumber // 휴대폰 번호 추가
                 };
 
                 // aspnetusers 테이블에 사용자 데이터를 대입
-                var result = await _userManager.CreateAsync(user, model.Password);           
+                var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
@@ -81,11 +79,11 @@ namespace ASPNET02_WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe ,false);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
                 // 파라미터 순서 : 아이디, 패스워드, IsPersistent = RememberMe, 실패 할 때 계정 잠그기
-                if(result.Succeeded) 
+                if (result.Succeeded)
                 {
                     // TODO : 
                     TempData["succeed"] = "로그인 했습니다";
@@ -93,7 +91,7 @@ namespace ASPNET02_WebApp.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("","로그인 실패");
+                    ModelState.AddModelError("", "로그인 실패");
                 }
 
             }
@@ -142,7 +140,7 @@ namespace ASPNET02_WebApp.Controllers
                 user.PhoneNumber = model.PhoneNumber;
                 user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, model.Password);
                 // 비밀번호 변경은 어렵다.ㅎ
-                var result = await _userManager.UpdateAsync(user); 
+                var result = await _userManager.UpdateAsync(user);
 
                 if (result.Succeeded)
                 {

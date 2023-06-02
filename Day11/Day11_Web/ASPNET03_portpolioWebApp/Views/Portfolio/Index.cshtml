@@ -4,67 +4,71 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_NewLayout.cshtml";
 }
+
 <div style="padding: 50px;" class="mt-5">
-    <div class="container"> 
-        <div class="container p-3">
-            <div class="row pt-4">
-                <div class="col-8">
-                    <h2 class="text-primary">포트폴리오 관리</h2>
-                </div>
-                <div class="col-4 text-end">
-                </div>
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-8">
+                <h2 class="text-primary">포트폴리오 관리</h2>
+            </div>
+            <div class="col-4 text-end">
             </div>
         </div>
-        <hr />
+    </div>
+    <div class="container">
         <p>
             <a asp-action="Create" class="btn btn-primary fs-5 py-1 px-4 me-3">Create New</a>
         </p>
-        <table class="table">
+        <hr />
+        <table class="table align-middle table-bordered border-primary" style="table-layout: fixed">
             <thead>
                 <tr>
-                    <th>
+                    <th class="align-bottom" width="10%">
                         @Html.DisplayNameFor(model => model.Division)
                     </th>
-                    <th>
+                    <th class="align-bottom" width="15%">
                         @Html.DisplayNameFor(model => model.Title)
                     </th>
-                    <th>
+                    <th class="align-bottom" width="35%">
                         @Html.DisplayNameFor(model => model.Description)
                     </th>
-                    <th>
+                    <th class="align-bottom" width="35%">
                         @Html.DisplayNameFor(model => model.Url)
                     </th>
-                    <th>
+                    <th class="align-bottom" width="15%">
                         @Html.DisplayNameFor(model => model.FileName)
                     </th>
-                    <th></th>
+                    <th class="align-bottom" width="20%">
+                        수정|보기|삭제
+                    </th>
                 </tr>
             </thead>
             <tbody>
-        @foreach (var item in Model) {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Division)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Description)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Url)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FileName)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-        }
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-top" width="10%" style="word-break: break-all">
+                            @Html.DisplayFor(modelItem => item.Division)
+                        </td>
+                        <td class="align-top" width="15%" style="word-break: break-all">
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td class="align-top" width="35%" style="word-break: break-all">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td class="align-top" width="35%" style="word-break: break-all">
+                            @Html.DisplayFor(modelItem => item.Url)
+                        </td>
+                        <td class="align-top" width="20%" style="word-break: break-all">
+                            @Html.DisplayFor(modelItem => item.FileName)
+                        </td>
+                        <td class="align-top">
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit | </a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Details | </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

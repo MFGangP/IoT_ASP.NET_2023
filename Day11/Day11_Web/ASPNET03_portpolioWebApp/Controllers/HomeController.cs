@@ -24,7 +24,7 @@ namespace ASPNET02_WebApp.Controllers
         public IActionResult Index()
         {
             // SELECT * FROM portfolios WHERE Division = 'PORTFOLIO';
-            var model = _db.Portfolios.Where(q => q.Division == "PORTFOLIO"); 
+            var model = _db.Portfolios.Where(q => q.Division == "PORTFOLIO");
 
             return View(model);
         }

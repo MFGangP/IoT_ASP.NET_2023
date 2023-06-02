@@ -42,7 +42,7 @@ namespace ASPNET02_WebApp
             builder.Services.AddAuthorization();
 
             var app = builder.Build();
-            
+
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

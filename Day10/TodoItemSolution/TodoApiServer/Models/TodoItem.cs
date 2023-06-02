@@ -9,8 +9,8 @@ namespace TodoApiServer.Models
         public int Id { get; set; }
         [Column("Title", TypeName = "Varchar(100)")]
         public string? Title { get; set; }
-        public DateTime? ToDate { get; set; }
-        public bool? IsComplete { get; set; }
+        public string ToDate { get; set; }
+        public int IsComplete { get; set; }
 
     }
 }

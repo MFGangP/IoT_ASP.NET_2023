@@ -12,8 +12,8 @@ namespace ASPNET02_WebApp.Models
         public string RoleName { get; set; }
         public List<string> Users { get; set; }
 
-        public EditRoleModel() 
-        { 
+        public EditRoleModel()
+        {
             Users = new List<string>();
         }
     }

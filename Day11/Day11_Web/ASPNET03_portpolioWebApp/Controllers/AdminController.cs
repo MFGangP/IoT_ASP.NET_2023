@@ -42,7 +42,7 @@ namespace ASPNET02_WebApp.Controllers
                     return RedirectToAction("ListRoles", "Admin");
                 }
 
-                foreach(IdentityError error in result.Errors)
+                foreach (IdentityError error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
                 }
@@ -105,8 +105,8 @@ namespace ASPNET02_WebApp.Controllers
                 {
                     return RedirectToAction("ListRoles", "Admin");
                 }
-                
-                foreach(var error in result.Errors)
+
+                foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
                 }

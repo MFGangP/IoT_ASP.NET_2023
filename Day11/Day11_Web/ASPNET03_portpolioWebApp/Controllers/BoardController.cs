@@ -20,14 +20,14 @@ namespace ASPNET02_WebApp.Controllers
         public IActionResult Index(int page = 1) // 게시판 최초화면 리스트
         {
             ViewData["NoScroll"] = "true"; // 게시판은 메인스크롤이 안생김
-           
+
             // EntityFramework 로 작업해도 되고 SQL 쿼리로 작업해도 된다
             //IEnumerable<Board> objBoardList = _db.Boards.ToList(); // SELECT * 쿼리
             //var objBoardList = _db.Boards.FromSql($"SELECT * FROM Boards").ToList();
             var totalCount = _db.Boards.Count();
             var pageSize = 10; // 게시판 한 페이지 10개씩 들어가는 리스트
             var totalPage = totalCount / pageSize; // 전체 페이지 / 페이지 사이즈
-            if (totalCount % pageSize > 0) 
+            if (totalCount % pageSize > 0)
             {
                 totalPage++; // 나머지 페이지가 있으면 페이지 수가 늘어나야함.
             }
@@ -35,9 +35,9 @@ namespace ASPNET02_WebApp.Controllers
             var countPage = 10;
             var startPage = ((page - 1) / countPage) * countPage + 1;
             var endPage = startPage + countPage - 1;
-            if (totalPage < endPage) 
-            { 
-                endPage = totalPage; 
+            if (totalPage < endPage)
+            {
+                endPage = totalPage;
             }
             int startCount = ((page - 1) * countPage) + 1;
             int endCount = startCount + (pageSize - 1);
@@ -67,7 +67,7 @@ namespace ASPNET02_WebApp.Controllers
         // Submit이 발생해서 내부로 데이터를 전달 할 액션
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Board board) 
+        public IActionResult Create(Board board)
         {
 
             try
@@ -88,11 +88,11 @@ namespace ASPNET02_WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int? Id) 
+        public IActionResult Edit(int? Id)
         {
             ViewData["NoScroll"] = "true"; // 게시판은 메인스크롤이 안생김
-            if (Id == null || Id == 0 ) 
-            { 
+            if (Id == null || Id == 0)
+            {
                 return NotFound(); // Error.cshtml이 표시
             }
 
@@ -147,7 +147,7 @@ namespace ASPNET02_WebApp.Controllers
         {
             var board = _db.Boards.Find(Id);
 
-            if(board == null)
+            if (board == null)
             {
                 return NotFound();
             }
@@ -163,7 +163,7 @@ namespace ASPNET02_WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Details(int? Id) 
+        public IActionResult Details(int? Id)
         {
             ViewData["NoScroll"] = "true"; // 게시판은 메인스크롤이 안생김
             // HttpGet Edit Action의 로직과 완전 동일

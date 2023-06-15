@@ -108,3 +108,11 @@ SEO Theme 완료
 - ASP.NET RestAPI
 	- RestAPI Server 수정
 	- FrontEnd Server 작업 계속
+	
+## 13일차
+- ASP.NET RestAPI
+	- WPF 앱 연동
+
+RestAPI사용 WPF App 및 Web 화면
+
+<img src="https://github.com/MFGangP/IoT_ASP.NET_2023/blob/main/images/RestAPI.png?raw=true" width="640">
